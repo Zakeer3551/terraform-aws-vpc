@@ -2,7 +2,7 @@ variable "project" {
     type = string
 }
 variable "environment" {
-    default = {}
+    default = ""
     type = string
     validation {
          condition = contains(["uat", "dev", "prod", "pre-prod"], var.environment)
