@@ -1,21 +1,21 @@
 variable "project" {
     type = string
 }
-/* variable "environment" {
+variable "environment" {
     default = {}
     validation {
          condition = contains(["uat", "dev", "prod", "pre-prod"], var.environment)
          error_message = "The environment should be of one of the values : 'uat', 'dev', 'prod', 'pre-prod'"
     }
-} */
+}
 
-variable "environment" {
+/* variable "environment" {
     type = string
     validation {
          condition = contains(["uat", "dev", "prod", "pre-prod"], var.environment)
          error_message = "The environment should be of one of the values : 'uat', 'dev', 'prod', 'pre-prod'"
     }
-}
+} */
 
 /* variable "environment" {
     type = string
