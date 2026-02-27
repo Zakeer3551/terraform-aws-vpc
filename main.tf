@@ -7,3 +7,16 @@ resource "aws_vpc" "main" {
   
 }
 
+resource "aws_internet_gateway" "main" {
+  vpc_id = aws_vpc.main.id
+
+  tags = var.igw_tags
+}
+
+resource "aws_subnet" "public" {
+  vpc_id     = aws_vpc.main.id
+  cidr_block = var.cidr_block
+  map_public_ip_on_launch = true
+  #availability_zone = 
+  tags = var.public_tags
+}
