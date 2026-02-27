@@ -30,6 +30,12 @@ variable igw_tags {
     default = {}
 }
 
-variable "cidr_block" {
+variable "public_subnet_cidrs" {
+    type = list
   default = ["10.0.1.0/24", "10.0.2.0/24"]
+}
+
+variable public_subnet_tags {
+    type = map
+    default = {}
 }
