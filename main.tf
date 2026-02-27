@@ -19,5 +19,5 @@ resource "aws_subnet" "public" {
   cidr_block = var.public_subnet_cidrs[count.index]
   availability_zone = local.availability_zone[count.index]
   map_public_ip_on_launch = true
-  tags = var.public_subnet_tags
+  tags = local.public_subnet_final_tags
 }
